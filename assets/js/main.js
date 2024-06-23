@@ -333,36 +333,38 @@
 			});
 
 })(jQuery);
+
+
 const form = document.querySelector("form"),
-    nameInput = form.querySelector("#name"),
-    emailInput = form.querySelector("#email"),
-    messageInput = form.querySelector("#message");
+    nameInput = form.querySelector("#name"),
+    emailInput = form.querySelector("#email"),
+    messageInput = form.querySelector("#message");
 
 form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    fetch(
-        "https://api.telegram.org/bot7472291188:AAH2BnyaDSd9gZQ1c54l7Vlwn9HtIjFdzUo/sendMessage",
-        {
-            method: "POST",
-            body: JSON.stringify({
-                chat_id: 6874833529,
-                text: `**Diqqat yangi xabar**\n\nIsm: <b>${nameInput.value}</b>\nEmail: <b>${emailInput.value}</b>\nXabar: <b>${messageInput.value}</b>`,
-                parse_mode: "html",
-                disable_web_page_preview: true,
-                reply_markup: {
-                    inline_keyboard: [
-                        [
-                            {
-                                text: "Xabarichiga email yuborish",
-                                url: `https://mail.google.com/mail/u/0/#inbox?compose=new`,
-                            },
-                        ],
-                    ],
-                },
-            }),
-            headers: {
-                "Content-Type": "application/json",
-            },
-        },
-    );
+    e.preventDefault();
+    fetch(
+https,//api.telegram.org/bot6728623236:AAEWTMeqDC2V3PSI_cI1XL9-YCgDNd95q5I/sendMessage",
+        {
+            method: "POST",
+            body: JSON.stringify({
+                chat_id: 6874833529,
+                text: `**Diqqat yangi xabar**\n\nIsm: <b>${nameInput.value}</b>\nEmail: <b>${emailInput.value}</b>\nXabar: <b>${messageInput.value}</b>`,
+                parse_mode: "html",
+                disable_web_page_preview: true,
+                reply_markup: {
+                    inline_keyboard: [
+                        [
+                            {
+                                text: "Xabarichiga email yuborish",
+                                url: `https://mail.google.com/mail/u/0/#inbox?compose=new`,
+                            },
+                        ],
+                    ],
+                },
+            }),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        },
+    );
 });
